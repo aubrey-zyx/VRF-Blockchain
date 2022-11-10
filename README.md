@@ -18,30 +18,30 @@ $env:FLASK_APP = "blockchain.py"
 flask run --port 5002      # 节点3，5002端口
 ![img_2.png](Screenshots/img_2.png)
 
-使用Postman软件，向http://127.0.0.1:5000/new_node网页发送三个节点的信息，选择POST
+使用Postman软件，向 http://127.0.0.1:5000/new_node 发送三个节点的信息，选择POST
 Send之后，app调用blockchain.py中new_node()函数，对三个新节点进行注册
 ![img_3.png](Screenshots/img_3.png)
 
-向http://127.0.0.1:5000/new_transactions网页发送一条交易信息，选择POST
+向 http://127.0.0.1:5000/new_transactions 发送一条交易信息，选择POST
 Send之后，app调用blockchain.py中new_transactions()函数，将交易信息存入区块链的下一个区块
 ![img_4.png](Screenshots/img_4.png)
 
-从http://127.0.0.1:5000/election网页获得选举信息，选择GET
+从 http://127.0.0.1:5000/election 获得选举信息，选择GET
 Send之后，app调用blockchain.py中show_election()函数，网页显示选举结果
 ![](Screenshots/img_5.png)
 terminal中包含每个节点的VRF具体过程
 ![](Screenshots/img_6.png)
 
 比如此次从三个节点中选出的矿工是5002端口的节点
-在http://127.0.0.1:5002/mine网页进行挖矿，获得挖矿信息，选择GET
+在 http://127.0.0.1:5002/mine 进行挖矿，获得挖矿信息，选择GET
 ![](Screenshots/img_7.png)
 
-从http://127.0.0.1:5002/chain网页可以获得更新后的区块链信息，选择GET
+从 http://127.0.0.1:5002/chain 网页可以获得更新后的区块链信息，选择GET
 区块链末端多了刚才挖矿生成的区块
 ![](Screenshots/img_8.png)
 但是其他节点的区块链还未更新
 ![](Screenshots/img_9.png)
 
-在http://127.0.0.1:5000/node_refresh网页可以在该节点更新区块链，选择POST，
+在 http://127.0.0.1:5000/node_refresh 可以在该节点更新区块链，选择POST，
 ![](Screenshots/img_10.png)
 其他节点同理
