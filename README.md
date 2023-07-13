@@ -6,9 +6,9 @@ The miner selection process contains two main steps. First, a subset of nodes is
 This strategy offers an alternative to the proof of work approach. Rather than having every participant waste resources on the same puzzle to chase a single prize, a subset of participants are able to co-operate. Adversaries cannot know in advance which subset of participants will ultimately be empowered to elect a miner. Participants themselves have no influence over the _beta_string_ beyond their _sk_. 
 
 ## Main Files
-_dhvrf.py_: double-hash ECVRF (containing prove and verify functions)  
-_election.py_: two functions regarding the selection of committee and the selection of miner  
-_blockchain.py_: used Flask to simulate a simple blockchain and nodes  
+`dhvrf.py`: double-hash ECVRF (containing prove and verify functions)  
+`election.py`: two functions regarding the selection of committee and the selection of miner  
+`blockchain.py`: used Flask to simulate a simple blockchain and nodes  
 
 ## Instructions on Running the APP
 Enter the following two lines of codes in the terminal，and the APP will be running on _localhost: 5000_.   
